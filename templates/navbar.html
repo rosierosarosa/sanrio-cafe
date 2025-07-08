@@ -1,0 +1,50 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">🎀 Hello Kitty</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+<li class="nav-item nav-sanrio-icon">
+  <a class="nav-link" href="https://tbcbank.ge/ka" target="_blank">
+    <img src="{{ url_for('static', filename='tbs/tbs.jpg') }}"
+         alt="tbs" />
+  </a>
+</li>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home 🏠</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About Us 🌸</a></li>
+        <li class="nav-item"><a class="nav-link" href="/profile">Profile 🐱</a></li>
+        <li class="nav-item"><a class="nav-link" href="/foodlist">food list🎀</a></li>
+        <li class="nav-item"><a class="nav-link" href="/booking">Booking 🧸</a></li>
+        {% if current_user.is_authenticated and current_user.role.lower() == 'admin' %}
+  <li class="nav-item"><a class="nav-link" href="/add_food">add food🌸</a></li>
+{% endif %}
+
+        {% if current_user.is_authenticated and current_user.role.lower() == "admin" %}
+  <li class="nav-item"><a class="nav-link" href="/admin/bookings">Admin Bookings 📋</a></li>
+{% endif %}
+
+
+      </ul>
+      <form class="d-flex me-3" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search for cuteness..." aria-label="Search" />
+        <button class="btn btn-outline-success" type="submit">Search 🐰</button>
+      </form>
+      <div class="d-flex align-items-center gap-3">
+        {% if current_user.is_authenticated %}
+          <span style="color: #ff69b4; font-weight: 700; font-size: 1.1rem;">
+            Hi, <span class="text-primary">{{ current_user.username }}</span> <span style="color: #ff69b4;">&#10084;</span>
+          </span>
+          <a href="{{ url_for('logout') }}" class="btn btn-outline-danger btn-sm">Log Out</a>
+        {% else %}
+          <a href="{{ url_for('login') }}" class="btn btn-outline-primary">Log In</a>
+          <a href="{{ url_for('register') }}" class="btn btn-outline-pink">Sign Up</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>

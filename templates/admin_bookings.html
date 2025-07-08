@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="text-center mt-4" style="color: hotpink;">📋 All Bookings (Admin View)</h2>
+
+<div class="container mt-4">
+  <table class="table table-bordered table-striped">
+    <thead class="table-pink">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Date</th>
+        <th>Guests</th>
+        <th>Requests</th>
+        <th>User</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for booking in bookings %}
+        <tr>
+          <td>{{ booking.id }}</td>
+          <td>{{ booking.name }}</td>
+          <td>{{ booking.date.strftime('%B %d, %Y') }}</td>
+          <td>{{ booking.num_guests }}</td>
+          <td>{{ booking.special_requests or '—' }}</td>
+          <td>{{ booking.user_id }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

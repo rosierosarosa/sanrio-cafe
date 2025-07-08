@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="text-center mt-5">
+  <h2 style="color: hotpink;">🎀 Booking Confirmed! 🎀</h2>
+  <p>Thank you for booking, {{ current_user.username }}!</p>
+
+  <div class="mt-4 text-start d-inline-block" style="text-align: left; background-color: #fff0f5; padding: 20px; border-radius: 15px; box-shadow: 0 0 10px pink;">
+    <h4 style="color: #d63384;">🧸 Your Booking Details:</h4>
+    <p><strong>Name:</strong> {{ name }}</p>
+    <p><strong>Date:</strong> {{ date.strftime('%B %d, %Y') }}</p>
+    <p><strong>Guests:</strong> {{ guests }}</p>
+    <p><strong>Special Requests:</strong> {{ comment or "None" }}</p>
+  </div>
+
+  <a href="/" class="btn btn-outline-pink mt-4">Back to Home 🏠</a>
+</div>
+
+{% endblock %}
+

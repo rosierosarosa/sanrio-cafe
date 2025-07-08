@@ -1,0 +1,278 @@
+body {
+  background-color: #fffafc;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  color: #444;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: #ffe4f0;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.navbar {
+  background-color: #ffe4f2 !important;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(255, 182, 193, 0.4);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 20px auto;
+  background-color: #fff0f5;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(255, 105, 180, 0.2);
+}
+
+button,
+.btn {
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #ff1493;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffc0cb;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #fffafc;
+  font-family: inherit;
+}
+
+input[type="submit"] {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #ff1493;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #888;
+}
+
+.btn-outline-pink {
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-pink:hover {
+  background-color: #ff69b4;
+  color: white;
+  border-color: #ff69b4;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.nav-username {
+  color: #ff69b4;
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.sanrio-picker {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.sanrio-picker input[type="radio"] {
+  display: none;
+}
+
+.sanrio-picker label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  border: 2px solid #ccc;
+  padding: 5px;
+  border-radius: 12px;
+}
+
+.sanrio-picker label:hover {
+  border-color: hotpink;
+  transform: scale(1.05);
+}
+
+.sanrio-picker img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+input[type="radio"]:checked + label {
+  border: 3px solid hotpink;
+  transform: scale(1.1);
+  box-shadow: 0 0 8px hotpink;
+}
+
+body {
+  background-color: #fff0f5;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.navbar {
+  background-color: #ffe4f2 !important;
+  border-radius: 10px;
+  margin: 10px;
+  box-shadow: 0 4px 6px rgba(255, 182, 193, 0.4);
+}
+
+.navbar-brand, .nav-link {
+  color: #d63384 !important;
+  font-weight: bold;
+}
+
+.form-control {
+  border-radius: 20px;
+}
+
+.btn-outline-success {
+  border-color: #ff69b4;
+  color: #ff69b4;
+}
+
+.btn-outline-success:hover {
+  background-color: #ffb6c1;
+  color: white;
+}
+
+.btn-outline-pink {
+  border-color: #ff69b4;
+  color: #ff69b4;
+}
+
+.btn-outline-pink:hover {
+  background-color: #ffb6c1;
+  color: white;
+}
+
+.carousel-wrapper {
+  max-width: 600px;
+  margin: auto;
+}
+
+.carousel-item img {
+  height: 350px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.card img {
+  height: 250px;
+  object-fit: cover;
+}
+
+
+.nav-sanrio-icon img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 4px hotpink;
+  transition: transform 0.3s ease;
+}
+
+.nav-sanrio-icon img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 8px deeppink;
+}
+
+
+
+.btn-outline-success {
+  background-color: #ff69b4;
+  color: white;
+  border: 2px solid #ff69b4;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-success:hover {
+  background-color: white;
+  color: #ff69b4;
+  border: 2px solid #ff69b4;
+}
+
+
+
+/* About Page Styles */
+.about-page {
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  background-color: #fffafc;
+  color: #444;
+  padding: 30px;
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.7;
+  border: 4px dotted #ffccdd;
+  border-radius: 20px;
+}
+
+.about-page h2 {
+  color: #ff69b4;
+  text-align: center;
+}
+
+.about-page ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.about-page ul li::before {
+  content: "🍓 ";
+}
+
+.about-footer {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 1.2em;
+}
+
+.about-page a {
+  color: #ff8fab;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.about-page a:hover {
+  text-decoration: underline;
+}
